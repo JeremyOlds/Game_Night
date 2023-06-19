@@ -1,0 +1,12 @@
+/* BASIC STYLES HERE */
+
+
+img {
+  max-height: 10vh;
+  max-width: 10vw;
+}
+
+.players-container {
+  width: 50vw;
+  height: 100vh;
+}
