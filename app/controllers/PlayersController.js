@@ -21,6 +21,7 @@ export class PlayersController {
   constructor() {
     console.log('testing player controller')
     _drawPlayers()
+    AppState.on('scoreChange', _drawPlayers)
   }
 
   // create a function to increase the score of a player, this needs to reference the service
@@ -36,6 +37,9 @@ export class PlayersController {
     playerService.decreasePlayerScore(playerId)
   }
 
+  addPlayer() {
+    playerService.addPlayer()
+  }
 
 }
 

@@ -3,17 +3,20 @@ import { AppState } from "../AppState.js"
 
 
 class PlayerService {
+  addPlayer() {
+
+  }
 
   increasePlayerScore(playerId) {
 
     const players = AppState.players
-    console.log(players)
+    // console.log(players)
 
     let foundPlayer = players.find(player => player.id == playerId)
 
     // @ts-ignore
     foundPlayer.score++
-
+    AppState.scoreChange++
   }
   decreasePlayerScore(playerId) {
     const players = AppState.players
@@ -22,7 +25,7 @@ class PlayerService {
 
     // @ts-ignore
     foundPlayer.score--
-
+    AppState.scoreChange--
   }
 
 }
